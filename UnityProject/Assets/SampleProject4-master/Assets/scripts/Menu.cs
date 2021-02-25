@@ -25,12 +25,12 @@ public class Menu : MonoBehaviour {
 		if(GUI.Button(new Rect(origin_x, origin_y + buttonHeight + 10, buttonWidth, buttonHeight), "Rigibody Controller")) {
 			Application.LoadLevel(2);
 		}
-		if(GUI.Button(new Rect(origin_x, origin_y + buttonHeight * 2 + 20, buttonWidth, buttonHeight), "First Person Controller")) {
-			Application.LoadLevel(3);
-		}
-		if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * 3 + 30, buttonWidth, buttonHeight), "Level 4"))
+		if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * 2 + 20, buttonWidth, buttonHeight), "Click To Load Level 4"))
 		{
 			Application.LoadLevel(4);
+		}
+		if(GUI.Button(new Rect(origin_x, origin_y + buttonHeight * 3 + 30, buttonWidth, buttonHeight), "First Person Controller")) {
+			Application.LoadLevel(3);
 		}
 		if (GUI.Button(new Rect(origin_x, origin_y + buttonHeight * 4 + 40, buttonWidth, buttonHeight), "Exit")) {
 			#if UNITY_EDITOR
