@@ -19,7 +19,6 @@ public class Chasing : MonoBehaviour {
 	void Start () {
 		GameManager.Instance.TotalEnemy++;
 		GameManager.Instance.ShowInfo();
-		speed = 1f;
 		health = 100.0f;
 		maxHealth = 100.0f;
 		healText = transform.FindChild("EnemyCanvas").FindChild("HealthBarText").GetComponent<Text>();
@@ -36,6 +35,7 @@ public class Chasing : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col) {
 		if(col.gameObject.tag == "Bullet") {
+			Destroy(col.gameObject);
 
 			if(health > 0)
 				health -= 10;
